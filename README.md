@@ -38,5 +38,5 @@ streamlit run Novabank_dashboard.py
 ---
 
 ## AI usage
-Built with assistance from Claude (Anthropic) — see the AI Usage Log 
-in the notebook for details on what Claude contributed.
+Built with assistance from Claude (Anthropic) and ChatGPT— see the AI Usage Log 
+in the notebook for details on what AI contributed.
