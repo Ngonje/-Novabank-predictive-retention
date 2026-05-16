@@ -1,2 +1,2 @@
-# -Novabank-predictive-retention
+# Novabank predictive retention
 ML-powered campaign targeting framework for NovaBank
