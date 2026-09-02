@@ -279,7 +279,7 @@ with st.sidebar:
     st.markdown("<div style='font-size:11px;color:#8B949E;margin-top:8px;'>Segmentation</div>", unsafe_allow_html=True)
     st.markdown("<div style='font-size:13px;color:#C9D1D9;'>K-Means (k=8, silhouette-optimised)</div>", unsafe_allow_html=True)
     st.markdown("---")
-    st.markdown("<div style='font-size:11px;color:#8B949E;'>Analytics Methods & Frameworks · Quantic · 2026</div>", unsafe_allow_html=True)
+    st.markdown("<div style='font-size:11px;color:#8B949E;'>MSBA Capstone · Quantic · 2026</div>", unsafe_allow_html=True)
 
 # ── HEADER ─────────────────────────────────────────────────────────────────────
 st.markdown("""
