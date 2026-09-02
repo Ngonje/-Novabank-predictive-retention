@@ -592,18 +592,27 @@ elif "Customer Segments" in page:
 
     # Segment breakdown bar
     st.markdown("<div class='section-head'>Subscription Rate by Segment</div>", unsafe_allow_html=True)
+    
     seg_sub = seg_profile.sort_values('sub_rate', ascending=True)
+
     fig = go.Figure(go.Bar(
-        x=seg_sub['sub_rate']*100,
+        x=seg_sub['sub_rate'] * 100,
         y=seg_sub.index,
         orientation='h',
-        marker_color=[SEG_COLORS.get(s,GREY) for s in seg_sub.index],
-        text=[f'{v:.0%}  ({int(n):,} customers)' for v,n in
-              zip(seg_sub['sub_rate'], seg_sub['customers'])],
+        marker_color=[SEG_COLORS.get(s, GREY) for s in seg_sub.index],
+        text=[
+            f'{v:.0%}  ({int(n):,} customers)'
+            for v, n in zip(seg_sub['sub_rate'], seg_sub['customers'])
+        ],
         textposition='outside',
     ))
-    fig.update_layout(**PLOTLY_LAYOUT, height=300,
-                      xaxis_title='Subscription rate (%)', margin=dict(l=10,r=120,t=40,b=10))
+
+    fig.update_layout(
+        **{k: v for k, v in PLOTLY_LAYOUT.items() if k != 'margin'},
+        height=300,
+        xaxis_title='Subscription rate (%)',
+        margin=dict(l=10, r=120, t=40, b=10)
+    )
     st.plotly_chart(fig, use_container_width=True)
 
     # Full profile table
